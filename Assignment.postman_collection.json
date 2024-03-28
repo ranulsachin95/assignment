@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "95f43e72-50e6-49de-be66-c36a18ef2104",
+		"name": "Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5780290"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/internal/receive-products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"productId\": \"MD-543564697\",\r\n\"category\": \"Babies\",\r\n\"brand\": \"Tiger\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/internal/receive-products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"internal",
+						"receive-products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/external/get-products-by-shopper?category=cars&limit=10&shopperId=S-121030&brand",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/external/get-products-by-shopper?category=cars&limit=10&shopperId=S-121030&brand",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"external",
+						"get-products-by-shopper"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "cars"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "shopperId",
+							"value": "S-121030"
+						},
+						{
+							"key": "brand",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/internal/save-shopper",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"shopperId\": \"S-121030\",\r\n\"shelf\": [\r\n{\r\n\"product\": {\r\n\"productId\": \"23D-543564697\",\r\n\"category\": \"Cars\",\r\n\"brand\": \"BMW\"\r\n},\r\n\"relevancyScore\": 12.089209569320897\r\n},\r\n{\r\n\"product\": {\r\n\"productId\": \"12-543364697\",\r\n\"category\": \"Van\",\r\n\"brand\": \"BMW\"\r\n},\r\n\"relevancyScore\": 411.089209569320897\r\n},\r\n{\r\n\"product\": {\r\n\"productId\": \"df43-543364697\",\r\n\"category\": \"Van\",\r\n\"brand\": \"Volvo\"\r\n},\r\n\"relevancyScore\": 401.089209569320897\r\n},\r\n{\r\n\"product\": {\r\n\"productId\": \"wrt3-543364697\",\r\n\"category\": \"Van\",\r\n\"brand\": \"benz\"\r\n},\r\n\"relevancyScore\": 201.089209569320897\r\n},\r\n{\r\n\"product\": {\r\n\"productId\": \"rtD-543564697\",\r\n\"category\": \"Cars\",\r\n\"brand\": \"Volvo\"\r\n},\r\n\"relevancyScore\": 55.16626010671777\r\n},\r\n{\r\n\"product\": {\r\n\"productId\": \"23E-543564697\",\r\n\"category\": \"Cars\",\r\n\"brand\": \"Bens\"\r\n},\r\n\"relevancyScore\": 31.089209569320897\r\n},\r\n{\r\n\"product\": {\r\n\"productId\": \"2E-5433564697\",\r\n\"category\": \"Cars\",\r\n\"brand\": \"Bens\"\r\n},\r\n\"relevancyScore\": 31.089209569320897\r\n},\r\n{\r\n\"product\": {\r\n\"productId\": \"dD-443564697\",\r\n\"category\": \"Babies\",\r\n\"brand\": \"Tiger\"\r\n},\r\n\"relevancyScore\": 73.01492966268303\r\n}\r\n]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/internal/save-shopper",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"internal",
+						"save-shopper"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
