@@ -29,7 +29,7 @@ public class ProductServiceImpl implements ProductService {
             throw new ProductNotFoundException("Not Fount Shopper Id");
         }
 
-        else if (limit<3 || limit>100) {
+        else if (limit<10 || limit>100) {
             log.info("ProductServiceImpl -> getProductByShopper ->Limit Error Generated ");
             throw new ProductNotFoundException("Limit Should Be Less than 100 and Grater than 10");
 
